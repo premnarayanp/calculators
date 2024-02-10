@@ -34,7 +34,7 @@ code {
     overflow: hidden;
 }
 
-#display .query-list {
+#display #query-list {
     max-height: 50%;
     width: 100%;
     padding: 0;
@@ -46,14 +46,15 @@ code {
     overflow-x: hidden;
     /* column-reverse:- purpose of reversing order of map to ,align latest query of queries show/scroll on bottom side,that again reverse by flex-column-reverse property */
     display: flex;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
+    flex-direction: column;
 }
 
-.query-list li {
+#query-list li {
     background-color: rgb(220, 231, 231);
 }
 
-.query-list li:nth-child(odd) {
+#query-list li:nth-child(even) {
     border-bottom: solid 2px gray;
 }
 
@@ -71,7 +72,7 @@ code {
     background-color: aliceblue;
 }
 
-#display .result {
+#result {
     color: green;
     position: relative;
     right: 0;
@@ -85,7 +86,7 @@ code {
 
 /* Hide scrollbar for IE and Edge Firefox*/
 
-.query-list {
+#query-list {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -93,7 +94,7 @@ code {
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 
-.query-list::-webkit-scrollbar {
+#query-list::-webkit-scrollbar {
     display: none;
 }
 
